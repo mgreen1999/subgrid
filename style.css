@@ -5,12 +5,45 @@
 }
 
 img {
-  width: 100%;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
+/************** Index ***************/
+.mainNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 60px;
+}
+.mainNav a {
+  text-decoration: none;
+}
+.mainNav h1 {
+  margin-right: auto;
+}
+
+.mainNav h1 {
+  font-size: 3.052rem;
+  letter-spacing: -0.1rem;
+  line-height: 1;
+  color: black;
+}
+
+.mainNav h1 span {
+  display: inline-block;
+  transform: scaleX(-1) translateX(-0.2rem);
+  color: brown;
+}
+
+.mainNav nav a {
+  color: black;
+  text-decoration: underline;
+}
 .category_h2 {
   font-size: 50px;
-  margin-left: 50px;
+  margin-left: 55px;
   margin-top: 110px;
   margin-bottom: -30px;
 }
@@ -28,4 +61,228 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
   margin: 50px;
+}
+
+/************** produktliste ***************/
+
+.productlist_h2 {
+  font-size: 3rem;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.product_list_container {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.cards {
+  background-color: rgb(240, 236, 236);
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 6;
+}
+
+.product_cat {
+  opacity: 30%;
+}
+
+.product_list_container a {
+  color: black;
+  font-weight: bold;
+}
+
+/******** card 2 & 4 ********/
+.discounted {
+  display: flex;
+  justify-content: space-between;
+}
+
+.discounted p {
+  margin: 0;
+}
+
+.discounted p:last-child {
+  background-color: red;
+  padding-left: 0.3rem;
+  font-size: 1.2rem;
+}
+
+/******** card 3 & 4********/
+
+.productlist article {
+  display: flex;
+  flex-direction: column;
+}
+
+.productlist article.soldOut::before {
+  content: "Sold Out";
+  position: absolute;
+}
+
+.sold_out img {
+  opacity: 50%;
+  filter: grayscale(55%);
+}
+.sold_out {
+  display: grid;
+}
+.sold_out p {
+  display: grid;
+  font-size: 30px;
+  font-weight: bold;
+  z-index: 2;
+  background-color: grey;
+  height: max-content;
+  width: max-content;
+  color: whitesmoke;
+  padding: 10px;
+}
+.sold_out p,
+.sold_out img {
+  grid-area: 1/1;
+}
+
+/************** produkt ***************/
+
+/****** breadcrumbs ******/
+
+.breadcrumbs {
+  display: flex;
+  font-size: 20px;
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+.breadcrumbs ol {
+  list-style: decimal outside;
+}
+
+.breadcrumbs li {
+  list-style-position: inside;
+  color: black;
+  display: list-item;
+  unicode-bidi: isolate;
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding-top: 20px;
+}
+.breadcrumbs li a {
+  list-style-position: inside;
+  color: black;
+  display: list-item;
+  unicode-bidi: isolate;
+  font-weight: bold;
+}
+
+.breadcrumbs li a::after {
+  content: " > ";
+  font-size: 0.6rem;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 10px;
+  transition: all 0.3s;
+}
+
+/******* produkt img & tekst ********/
+
+.img_product {
+  display: block;
+  max-width: 45%;
+  height: auto;
+  padding-left: 100px;
+  padding-top: 50px;
+  padding-right: 50px;
+}
+
+.product_container {
+  display: flex;
+}
+
+.info {
+  margin-top: 50px;
+  margin-left: 20px;
+}
+.info h2 {
+  font-weight: bolder;
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+}
+dt {
+  font-weight: bold;
+  font-size: 20px;
+}
+.info h1 {
+  font-weight: bolder;
+  font-size: 2rem;
+  padding-top: 10px;
+}
+.purchaseBox {
+  background: brown;
+  color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 80px;
+}
+
+.purchaseBox p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+label {
+  font-weight: bold;
+  display: flex;
+  margin-bottom: 40px;
+}
+
+select {
+  padding: 1rem;
+  font-size: 1rem;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: black;
+  height: 3.5rem;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-position: center right 0.5rem;
+  margin-left: 50px;
+  margin-top: -30px;
+}
+button {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 800px) {
+  .product_container {
+    display: grid;
+  }
+  .img_product {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-right: 50px;
+  }
+  .purchaseBox {
+    background: brown;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+  }
+  .info {
+    margin-top: 30px;
+    margin-left: 50px;
+  }
 }
