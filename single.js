@@ -51,7 +51,6 @@ function show(data) {
                 </section>
             </div>
 
-  
   `;
 }
 
