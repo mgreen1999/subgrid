@@ -22,7 +22,7 @@ function showFiltered(filter) {
 }
 
 const category = new URLSearchParams(window.location.search).get("category");
-const url = `https://kea-alt-del.dk/t7/api/products?limit=100&category=${category}`;
+const url = `https://kea-alt-del.dk/t7/api/products?limit=200&category=${category}`;
 
 getData(url);
 
