@@ -1,6 +1,9 @@
 console.log("Produkt loaded....");
 
-const id = 1599;
+// const id = 1599;
+
+const id = new URLSearchParams(window.location.search).get("id");
+
 const productUrl = "https://kea-alt-del.dk/t7/api/products/" + id;
 const product_container = document.querySelector(".product_container");
 
